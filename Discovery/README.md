@@ -1,8 +1,8 @@
 # Discovery
 
-## client-meeting-1-minutes.md
+## Minutes.md
 
-First meeting with client representative, Alicia Mckoy, on 9/29/22.
+Raw minutes of first meeting with client representative, Alicia Mckoy, on 9/29/22.
 
 Members present:
 
