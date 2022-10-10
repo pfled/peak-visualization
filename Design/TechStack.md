@@ -19,4 +19,5 @@
 * [HP Omnicept SDK](https://developers.hp.com/omnicept/docs)
     * These are the headsets that Peak Mind are using so will be using this SDK to create the data visualization for the Biometrics being taken while a user is in a simulation.
 
-Unity? Unreal? C++
+* [AWS](https://aws.amazon.com/)
+    * We will be provided an API or similar interface to get the data for the HP data visualization.
