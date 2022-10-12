@@ -14,7 +14,7 @@
       3. Once processed, the visualiztion interface displays the data in a well-polished UI experience within the headset
     * Corresponding business requirement: BR3
 
-  * UC2: Access visualized employee mental health/stress levels (Actors: Managers, Executives)
+  * UC2: Access visualized employee mental well-being/stress levels (Actors: Managers, Executives)
     * Using the Peak Mind webapp, managers can create comprehensive visual reports that aggregate the surveys and feedback data received from employees (i.e. what most urgently needs to be improved in the work environment). With the user's permission, biometric data is sent back through the AWS API and is also accessible by managers and executives, enhancing the survey data. 
     * Program flow:
       1. Data is stored from user surveys in webapp or VR biometric data interface
