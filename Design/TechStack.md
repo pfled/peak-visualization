@@ -15,6 +15,8 @@
     * We will be using Docker to make sure that our code runs on any system, especially since the team members are using different operating systems. Creating a docker container is also useful for moving our application into the production AWS environment.
 
 ## VR visualization
+* [Unity](https://unity.com/)
+    * We were unsure what the team at IU was using to create the simulation for Peak Mind so we chose Unity for the smaller learning curve compared to Unreal Enginge. (The HP Omnicpet SDK is only available for Unity, Unreal engine, or C++.)
 
 * [HP Omnicept SDK](https://developers.hp.com/omnicept/docs)
     * These are the headsets that Peak Mind are using so will be using this SDK to create the data visualization for the Biometrics being taken while a user is in a simulation.
