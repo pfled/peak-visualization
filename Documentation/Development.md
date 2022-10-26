@@ -23,8 +23,20 @@ Then go find the executable that was downloaded and run it
 
  Then Finally click install
 
+ ## Setting up the project locally
+
 The project follows Unity’s default folder structure: Assets, Packages, and ProjectSettings. A .gitignore and README.md are included at the root for version control and presentation. Within the Assets folder are files and folders for the HP Omnisept SDK called Glia.
 
 To open this project locally, pull from this repo, open Unity Hub, then go to Open > Add project from disk. Then, select the folder of the cloned project.
+![Open-in-Unity-hub](./images/OpeningInUnityHub.png)
+
+The HP SDK assets for Unity Should be in the project already so to add your credentials there will be a tab in the Unity editor labeled HP Omnicept click that then click configure and a new window will pop up where you can add you Client ID and Access key from this [page](https://omnicept-console.hpbp.io/xr/application)
+![Unity-editor-omnicept-tab](./images/UnityHpOmniTab.png)
+
+![Unity-editor-add-sdk-credentials](./images/UnityOmniCredentials.png)]
 
 In order to run the project, click the play button at the top of the Unity Editor pane. While playing, the HP SDK will create a separate pop-up that can be used to simulate user input such as a change in eye gaze or heart rate.
+![Unity-editor-play-button](./images/UnityRun.png)
+
+While you are running the application you can use the HP Omnicept Simulator that came with the SDK to send data to the application without needing a headset. The application can be found by searching in the Windows start menu. To actually begin to send information you need to hit "Send" or "Repeat" in the bottom left corner of the simulator
+![HP-Omnicept=Simulator](./images/HpOmniSimulator.png)
