@@ -14,3 +14,14 @@
 4. Once the build is finished It will open the folder that contains all of the build products. The **PeakVisualization** application will be the main executable for the application. 
 
 ![Unity Build folder with executable](./images/UnityBuildExecutable.png)
+
+# Web Application
+
+- To build the web application, open terminal at the project directory.
+
+- Then, run `npm run build` to create a build folder within the main directory.
+
+![Build Folder](./images/WebBuild.png)
+
+- Upload the build folder to a hosting service.
+

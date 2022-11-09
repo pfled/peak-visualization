@@ -42,3 +42,37 @@ The primary use for this application is to display the data being collected from
 ![Save File example](./images/Iteration1SaveButton.png)
 
 <figcaption align="center">Usually the blurred text will be something like <b>Users\MyUserName\</b></figcaption>
+
+# Web application
+
+# Login
+
+Users will log in to the dashboard with credentials provided by their employer.
+
+![Login Screen](./images/WebLogin.png)
+
+## Features
+---
+
+### Select Dataset
+
+- The Simulation Results will appear on your dashboard. You can select which simulation's dataset to view.
+
+![Dropdown](./images/WebDropdown.png)
+
+![Dropdown with Options](./images/WebDropdown2.png)
+
+### Chart Details
+
+- You can see the value of specific points on the chart by hovering over them.
+
+![Hover Details](./images/WebHover.png)
+
+### Filter Charts
+
+- You can filter which charts they want to view by clicking the pill toggles.
+
+![Heart Rate Shown](./images/WebFilter.png)
+
+![Heart Rate Hidden](./images/WebFilter2.png)
+

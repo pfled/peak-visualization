@@ -52,3 +52,16 @@ The project follows Unity’s default folder structure: Assets, Packages, and Pr
 - While you are running the application you can use the HP Omnicept Simulator that came with the SDK to send data to the application without needing a headset. The application can be found by searching in the Windows start menu. To actually begin to send information you need to hit "Send" or "Repeat" in the bottom left corner of the simulator
 
 ![HP-Omnicept=Simulator](./images/HpOmniSimulator.png)
+
+## Setting up the web app locally
+---
+
+The web app follows React folder structure standards. There is a public folder, a src folder containing components and assets, and files necessary for package management and git tracking. The components folder contains JavaScript files that create different components throughout the application. This is a feature of React that makes frontend code modular and repeatable.
+
+- To open this project locally, pull from this [repo](https://github.com/pfled/peak-vis-webapp). 
+
+- This project can be viewed in any IDE; Visual Studio Code is recommended.
+
+- Open the project then open a terminal at the directory. Type: `npm install; npm start`
+
+- This will run the application in development mode. Open http://localhost:3000 to view it in your browser.
