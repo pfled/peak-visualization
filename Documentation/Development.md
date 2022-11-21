@@ -62,6 +62,12 @@ The web app follows React folder structure standards. There is a public folder, 
 
 - This project can be viewed in any IDE; Visual Studio Code is recommended.
 
-- Open the project then open a terminal at the directory. Type: `npm install; npm start`
+- Make you sure you have the correct version of [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed.
+
+- Open the project then open a terminal at the directory. You can run the project by running `docker compose up`. When the container is running the output will look something like this.
+
+![Docker cli terminal output](./images/DockerTerminalOutput.png)
 
 - This will run the application in development mode. Open http://localhost:3000 to view it in your browser.
+
+- You can stop the container by pressing `Control + C` in the terminal instance where the compose up command was ran. Or by stopping it fin the Docker Desktop application.
