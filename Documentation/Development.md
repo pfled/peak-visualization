@@ -53,6 +53,12 @@ The project follows Unity’s default folder structure: Assets, Packages, and Pr
 
 ![HP-Omnicept=Simulator](./images/HpOmniSimulator.png)
 
+- Running unit tests in Unity is done through the Unity Test Runner plugin. IMPORTANT - the HP provided prefab for the Omnicept SDK has caused frequent Unity crashes when running unit tests in `play mode` after the tests have ran, so it is recommended that you disable the HPGlia prefab in the scene before you run the unit tests.
+
+![Unity Test Runner](./images/UnityTestRunner.png)
+
+![Disabling HPGlia Prefab](./images/DisableHPGlia.png)
+
 ## Setting up the web app locally
 ---
 
@@ -61,6 +67,8 @@ The web app follows React folder structure standards. There is a public folder, 
 - To open this project locally, pull from this [repo](https://github.com/pfled/peak-vis-webapp). 
 
 - This project can be viewed in any IDE; Visual Studio Code is recommended.
+
+- To run unit tests use `npm run test` in the root directory of the project.
 
 - Make you sure you have the correct version of [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed.
 
@@ -71,3 +79,10 @@ The web app follows React folder structure standards. There is a public folder, 
 - This will run the application in development mode. Open http://localhost:3000 to view it in your browser.
 
 - You can stop the container by pressing `Control + C` in the terminal instance where the compose up command was ran. Or by stopping it fin the Docker Desktop application.
+
+## AWS CDK api
+---
+- Using the cdk requries admin credentials to your AWS account along with the [AWS CLI](https://aws.amazon.com/cli/). 
+ - For development, simply clone the [repository](https://github.com/tsnewlin/peak-vis-cdk) AWS cdk projects do not run on a server.
+- The AWS cdk is used to create AWS infrastruce through code, you can learn more [here](https://aws.amazon.com/cdk/).
+- Unit tests can be ran by running `npm run test` in the root directory of the project. 
