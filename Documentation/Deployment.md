@@ -25,3 +25,13 @@
 
 - Upload the build folder to a hosting service.
 
+# AWS CDK
+
+- Firstly you need to have administrative permissions to your AWS account or high level persmission for AWS CloudFormation.
+
+- Configure you AWS CLI for you account (Learn more [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).) Then from the CDK project root directory run ```cdk bootstrap```
+
+- After the CDK command line tool is bootstrapped you can view the infrastructure YAML output for AWS CloudFormation by running ```cdk synth``` or ```cdk dif```.
+
+- To deploy the infrastructure to AWS run ```cdk deploy``` as there is only one "stack" in the cdk project currently.
+
