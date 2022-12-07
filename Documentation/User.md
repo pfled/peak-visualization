@@ -52,7 +52,7 @@ The primary use for this application is to display the data being collected from
 
 ## Login
 
-Users will log in to the dashboard with credentials provided by their employer.
+Users can access their datasets by entering the 6 digit Id used when submitting data through the Dashboard.
 
 ![Login Screen](./images/WebLogin.png)
 
