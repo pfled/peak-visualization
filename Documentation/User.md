@@ -12,36 +12,40 @@ By default users have to approve any application requesting data from the HP Omn
 
 The primary use for this application is to display the data being collected from the HP Omnicept sensors while using the headset.
 
-### Eye tracking an pupilometry 
+### Eye tracking and pupilometry 
 
-- On the side of the window there are two panels to display the data for the eye trackign and pupilometry sensors.
-- The top window will display the pupil dialation of each eye in millimeters
+- On the side of the window there are two panels to display the data for the eye tracking and pupilometry sensors.
+- The top window will display the pupil dialation of each eye in millimeters and through a dot in that will change it's size depending on the user's dialation.
 - The bottom panel will display the combined gaze (roughly where a user is looking) in the form of a three-dimensional coordinate.
 
-![Eye tracking and pupilometry panels](./images/Iteration1Pupil.png)
+<img src="./images/Iteration2Pupil.png" alt="Eye tracking and pupilometry panels" width="200" >
 
 ### Heart Rate
 
 - In the center of the window is the smallest panel that displays the heart rate of the user (beats per minute).
+- The heart in the center will also pulse and change color depending on the user's heart rate.
+- If the user's heart rate is less than 75 the heart will pulse slow with a light blue color. If between 76 and 135, the heart will pulse a bit faster with a yellow color. If between 136 and 175, the heart will beat faster and with a light red color. Finally, if the user's heart rate is above 176, the heart will pulse faster than before and with a dark red color.
 
-![Heart Rate Panel](./images/Iteration1Hr.png)
+
+<img src="./images/Iteration2Hr.png" alt="Heart Rate Panel" width="200">
 
 ### Cognitive load
 
  - On the right of window there is a panel that displays the cognitive load of a user in a range from 0.0 to 1.0.
+ - The circle around the load number is a bar that will fill and change color depending on what the user's congitive load is.
+ - If the user's cognitive load is less than 0.40, the bar would fill to the load with a light blue color. If the load is between 0.41 and 0.66, the bar would fill to the load with a yellow color. If the user's load is between 0.67 and 0.75 the bar would fill with a light red color. Finally, if the user's cognitive load is greater than 0.76, the bar would fill to the load point with a dark red color.
  - Cognitive load is a scientific tearm for a measurement of mental effort required to perform a task. Here is a [link](https://www.youtube.com/watch?v=2Sk2_4U58yg) to a video from HP explaining cognitive load in more detail.
 
- ![Cognitive load panel](./images/Iteration1CognitiveLoad.png)
+<img src="./images/Iteration2CognitiveLoad.png" alt="Cognitive load panel" width="200">
 
  ### Saving Data
 
- - On the bottom of the window there is a button labeled **Save Data** when you press that button it will save all of the data collected by the application to a JSON file.
- - When you press save the file path to where it was saved will be shown below the button. If you want to manipulate that file simple copy that file path and paste it into the search bar of the file explorer.
- - The file names are timestamps on when the file was saved.
+ - On the bottom right of the window there is a textbox and button labeled **UserID** and **Save Data**. When The user enters their 6 digit UserId the **Save Data** button will then become interactable.
+ - When you press the button the user's data will then be uploaded to an AWS S3 bucket that stores the data by UserID and by timestamp of when uploaded.
 
-![Save File example](./images/Iteration1SaveButton.png)
 
-<figcaption align="center">Usually the blurred text will be something like <b>Users\MyUserName\</b></figcaption>
+<img src="./images/Iteration2SaveDataButton.png" alt="Save Data" width="250">
+
 
 # Web application
 
