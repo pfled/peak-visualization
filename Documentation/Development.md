@@ -88,8 +88,8 @@ The web app follows React folder structure standards. There is a public folder, 
 
 - The Unity dashboard implements Stylecop for formatting rules and SonarLint for linting.
   - Both are implemented as NuGet packages that run in Visual Studio 2022.
-  - Neither implement auto-fix with a single command, but errors will be caught as they are typed and VS will provide warnings
-  - Specific rules can be configured in the .editorconfig file
+  - Neither implement auto-fix with a single command, but errors will be caught as they are typed and VS will provide warnings.
+  - Specific rules can be configured in the .editorconfig file. 
 
 ## AWS CDK api
 ---
