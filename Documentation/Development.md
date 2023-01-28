@@ -80,6 +80,12 @@ The web app follows React folder structure standards. There is a public folder, 
 
 - You can stop the container by pressing `Control + C` in the terminal instance where the compose up command was ran. Or by stopping it fin the Docker Desktop application.
 
+## Linting
+
+- The frontend is setup with ESLint/Prettier
+- To run the code formatter i.e. Prettier type the command `npm format` in the root directory and this will run `prettier --write` on the entire project.
+- There are two main commands for ESLint `npm lint` which will just run the basic ESLint command and `npm lint:fix` which will run some automatted fixes.
+
 ## AWS CDK api
 ---
 - Using the cdk requries admin credentials to your AWS account along with the [AWS CLI](https://aws.amazon.com/cli/). 
