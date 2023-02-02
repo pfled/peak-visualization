@@ -35,3 +35,4 @@
 
 - To deploy the infrastructure to AWS run ```cdk deploy``` as there is only one "stack" in the cdk project currently.
 
+- The console will output the base url of the API that is created using the ApiGateway service.

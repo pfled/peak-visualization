@@ -51,6 +51,10 @@ The project follows Unity’s default folder structure: Assets, Packages, and Pr
 
 - While you are running the application you can use the HP Omnicept Simulator that came with the SDK to send data to the application without needing a headset. The application can be found by searching in the Windows start menu. To actually begin to send information you need to hit "Send" or "Repeat" in the bottom left corner of the simulator
 
+![Unity-Data-Store-URL-Variable](./images/UnityDataStoreUrl.png)
+
+-In order to actually save data to an AWS bucket you will have to add the base URL of the ApiGateway API created by running CDK deploy as explain in the [Deployment Documentation](./Deployment.md). However, this is not required for any kind of unit testing or changes that need to be made for any other part of the project only if you need to actually test the upload.
+
 ![HP-Omnicept=Simulator](./images/HpOmniSimulator.png)
 
 - Running unit tests in Unity is done through the Unity Test Runner plugin. IMPORTANT - the HP provided prefab for the Omnicept SDK has caused frequent Unity crashes when running unit tests in `play mode` after the tests have ran, so it is recommended that you disable the HPGlia prefab in the scene before you run the unit tests.
@@ -81,7 +85,7 @@ The web app follows React folder structure standards. There is a public folder, 
 - You can stop the container by pressing `Control + C` in the terminal instance where the compose up command was ran. Or by stopping it fin the Docker Desktop application.
 
 ## Linting
-
+---
 - The frontend is setup with ESLint/Prettier
 - To run the code formatter i.e. Prettier type the command `npm format` in the root directory and this will run `prettier --write` on the entire project.
 - There are two main commands for ESLint `npm lint` which will just run the basic ESLint command and `npm lint:fix` which will run some automatted fixes.
@@ -96,4 +100,4 @@ The web app follows React folder structure standards. There is a public folder, 
 - Using the cdk requries admin credentials to your AWS account along with the [AWS CLI](https://aws.amazon.com/cli/). 
  - For development, simply clone the [repository](https://github.com/tsnewlin/peak-vis-cdk) AWS cdk projects do not run on a server.
 - The AWS cdk is used to create AWS infrastruce through code, you can learn more [here](https://aws.amazon.com/cdk/).
-- Unit tests can be ran by running `npm run test` in the root directory of the project. 
+- Unit tests can be ran by running `npm run test` in the root directory of the project. If you want to run the tests with coverage you can add the `--coverage` flag.
