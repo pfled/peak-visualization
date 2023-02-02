@@ -86,6 +86,11 @@ The web app follows React folder structure standards. There is a public folder, 
 - To run the code formatter i.e. Prettier type the command `npm format` in the root directory and this will run `prettier --write` on the entire project.
 - There are two main commands for ESLint `npm lint` which will just run the basic ESLint command and `npm lint:fix` which will run some automatted fixes.
 
+- The Unity dashboard implements Stylecop for formatting rules and SonarLint for linting.
+  - Both are implemented as NuGet packages that run in Visual Studio 2022.
+  - Neither implement auto-fix with a single command, but errors will be caught as they are typed and VS will provide warnings.
+  - Specific rules can be configured in the .editorconfig file. 
+
 ## AWS CDK api
 ---
 - Using the cdk requries admin credentials to your AWS account along with the [AWS CLI](https://aws.amazon.com/cli/). 
