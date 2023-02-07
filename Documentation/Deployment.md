@@ -3,7 +3,7 @@
 1. From the Unity editor with the project open. Click **File** in the top left of the editor window then select **Build Settings...**
 2. In the build setting window ensure that the `Scenes in build` table order is **Menu**, followed by **PeakVisualizationDashboard**, and finally **DataSave**.
 
-![Unity Build Settings](./images/UnityBuildSettings.png)
+![Unity Build Settings](./images/UnityBuildSettingsIteration3.png)
 
 3. Press the build button. This is will open a prompt to choose where the build will be saved to. Go into the **Build** folder of the Unity project (this folder may not exist if you haven't run any builds before). While inside the **Build** folder create a new folder with whatever name you find most useful.
 
