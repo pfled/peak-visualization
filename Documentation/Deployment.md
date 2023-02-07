@@ -1,7 +1,7 @@
 # Unity Application
 
 1. From the Unity editor with the project open. Click **File** in the top left of the editor window then select **Build Settings...**
-2. In the build setting window ensure that the the **PeakVisualizationDashboard** is the only scene selected in the `Scenes in build` table.
+2. In the build setting window ensure that the `Scenes in build` table order is **Menu**, followed by **PeakVisualizationDashboard**, and finally **DataSave**.
 
 ![Unity Build Settings](./images/UnityBuildSettings.png)
 
