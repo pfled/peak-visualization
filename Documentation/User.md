@@ -81,3 +81,20 @@ Users can access their datasets by entering the 6 digit Id used when submitting 
 ![Heart Rate Shown](./images/WebFilter.png)
 
 ![Heart Rate Hidden](./images/WebFilter2.png)
+
+### Export PDF
+
+- You can export the data to a PDF by clicking "Export PDF".
+
+![PDF Export](./images/WebExportPDF.png)
+
+![PDF Export Results](./images/WebExportPDFResult.png)
+
+### Export Raw Data
+
+- You can export the data to a JSON by clicking "Export Raw Data".
+
+![PDF Export](./images/WebExportData.png)
+
+![PDF Export Results](./images/WebExportDataResult.png)
+
