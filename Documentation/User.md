@@ -86,6 +86,17 @@ To get to registration click the link under the "LOGIN" button and create an acc
 
 ![Heart Rate Hidden](./images/WebFilter2.png)
 
+### Add Dataset Notes
+
+- To add a note to a session dataset, click on any of the charts. A window will appear with the data and timestamp values automatically filled in, and more space to add a note.
+
+![Note Taker UI](./images/WebNoteTakerInterface.png)
+
+### View Dataset Notes
+- To view all saved notes for a given dataset, click "View Session Notes".
+![View Session Notes Button](./images/WebShowSessionNotesButton.png)
+![Session Notes UI](./images/WebSessionNotes.png)
+
 ### Export PDF
 
 - You can export the data to a PDF by clicking "Export PDF".
