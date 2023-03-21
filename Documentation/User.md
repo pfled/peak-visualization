@@ -52,9 +52,13 @@ The primary use for this application is to display the data being collected from
 
 ## Login
 
-Users can access their datasets by entering the 6 digit Id used when submitting data through the Dashboard.
+Users can access their datasets by entering the email and password they created during registration.
 
 ![Login Screen](./images/WebLogin.png)
+
+To get to registration click the link under the "LOGIN" button and create an account using your email on this page.
+
+![Registration Screen](./images/WebRegister.png)
 
 ## Features
 
