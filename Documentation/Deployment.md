@@ -17,6 +17,8 @@
 
 # Web Application
 
+## Frontend
+
 - To build the web application, open terminal at the project directory.
 
 - Then, run `npm run build` to create a build folder within the main directory.
@@ -25,14 +27,12 @@
 
 - Upload the build folder to a hosting service.
 
-# AWS CDK
+## Backend 
 
-- Firstly you need to have administrative permissions to your AWS account or high level persmission for AWS CloudFormation.
+- The backend is ready to run in a web server by running the shell script in the `bin/` folder: `bin/run.sh`.
 
-- Configure you AWS CLI for you account (Learn more [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html).) Then from the CDK project root directory run ```cdk bootstrap```
+- In the environment you will have to set the environment variable `ENV` variable to `production`. Currently there is no production configuration so you will have to create an appropriate one in the `backend/api/config.py` file because it currently only has a configuration for development and testing.
 
-- After the CDK command line tool is bootstrapped you can view the infrastructure YAML output for AWS CloudFormation by running ```cdk synth``` or ```cdk dif```.
+- The api is setup to run on the popular Python webserver flavor `Gunicorn`. so if that is not your preference for production you'll have to create a diffent setup for the api.
 
-- To deploy the infrastructure to AWS run ```cdk deploy``` as there is only one "stack" in the cdk project currently.
-
-- The console will output the base url of the API that is created using the ApiGateway service.
+- You can just take the code in the `backend` directory and run the setup shell script on a web server running Gunicorn or in a container and put on a cloud hosting service. To route traffic you will likely need some sort of load balancer to route http or https traffick to port 8080 (or the port you configured) on the web server.

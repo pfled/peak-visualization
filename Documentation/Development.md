@@ -127,6 +127,21 @@ backend
 ```
  The `config.py` file contains the code for the main api and Flask settings and the `__init__.py` file in the `api` folder sets up the application. `controllers` is the folder that container the functional code for most of the api endpoints (routes). `utils` contains additional functional code for additional shared behaviour that don't belong in a single controller like checking if JWT tokens are blacklisted. `models` contain data classes that represent tables within the database it is also necessary to create database migrations. `blueprints` contain the files that define all of the endpoints (routes) in a blueprint which is a Flask construct. 
 
+ To run the backend api completely you will need to add a `.env` file to the `backned` directory with these variables
+ ```
+DB_CONNECTION=
+DB_USERNAME=peak-vis
+DB_PASSWORD=dev
+DB_HOST=127.0.0.1
+DB_NAME=peak-visualization
+SECRET_KEY=
+S3_BUCKET_NAME=
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+ ``` 
+
+The `S3_BUCKET_NAME`, `AWS_ACCESS_KEY_ID`, and `AWS_SECRET_ACCESS_KEY` should all be created and found on your AWS account. `DB_CONNECTION` is the database flavor that you will be using, currently we are using MySQL but you could use whatever other SQL flavor like `PostgreSQL`. Most of the `DB` variables are also set in the `docker-compose.yml` file when defining the database image.
+
 ## Linting
 ---
 
