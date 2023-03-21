@@ -66,38 +66,84 @@ The project follows Unity’s default folder structure: Assets, Packages, and Pr
 ## Setting up the web app locally
 ---
 
-The web app follows React folder structure standards. There is a public folder, a src folder containing components and assets, and files necessary for package management and git tracking. The components folder contains JavaScript files that create different components throughout the application. This is a feature of React that makes frontend code modular and repeatable.
-
-- To open this project locally, pull from this [repo](https://github.com/pfled/peak-vis-webapp). 
+### Requirements
 
 - This project can be viewed in any IDE; Visual Studio Code is recommended.
 
-- To run unit tests use `npm run test` in the root directory of the project.
-
 - Make you sure you have the correct version of [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed.
 
-- Open the project then open a terminal at the directory. You can run the project by running `docker compose up`. When the container is running the output will look something like this.
+- Python 3.11 or higher is required for the backend
 
+- To open this project locally, pull from this [repo](https://github.com/pfled/peak-vis-webapp).
+
+- If you don't have make you can run the command listed in the `Makefile` which is `coverage run -m pytest && coverage report -m`.
+- If you want to run the unit tests without code coverage you can just run `pytest`.
+
+### Running the project
+- Open the project then open a terminal at the directory. You can run the project by running `docker compose up`. This will create a Docker container that has an image for a MySQL database, Backend, and Frontend When the container is running the output will look something like this.
 ![Docker cli terminal output](./images/DockerTerminalOutput.png)
 
-- This will run the application in development mode. Open http://localhost:3000 to view it in your browser.
+- The Frontend will run on port 3000, the Backend will run on port 8080, and the MySQL database will run on port 3306.
+  - To connect to the data do so through a socket connection with the username `peak-vis` and the password `dev`.
 
-- You can stop the container by pressing `Control + C` in the terminal instance where the compose up command was ran. Or by stopping it fin the Docker Desktop application.
+- You can stop the container by pressing `Control + C` in the terminal instance where the compose up command was ran. Or by stopping it in the Docker Desktop application.
+  - If you are having issues with caching older versions of the code when restarting the Docker container after making changes you can run the command `docker compose up --build --force-reacreate`. This should rebuild the container and ignore all caches in Docker when the container starts.
+
+### Frontend
+
+The web app follows React folder structure standards. There is a public folder, a src folder containing components and assets, and files necessary for package management and git tracking. The components folder contains JavaScript files that create different components throughout the application. This is a feature of React that makes frontend code modular and repeatable. 
+
+- To run unit tests use `npm run test` in the root directory of the project.
+
+- You can view the fronte in your browser by connecting to http://localhost:3000.
+
+### Backend
+
+The api is built using Flask Python. To install all of the dependencies you can run `make install-dev` if you have and use `Make` or you could run the command in the make file: `pip install -r requirements/common.txt -r requirements/develop.txt` (you can replace `pip` with `pip3` if that is that Python package manager you prefer). 
+
+The database can be initialized in the dev environment by running the commands `flask db migrate` then `flask db upgrade` which with use the `flask-migrate` package to automatically create the database schema defined by `Models` in the api code.
+
+The file structure for the project is as follows:
+```
+backend
+├── api
+│   ├── __init__.py
+│   ├── config.py
+│   │
+│   ├── controllers
+│   │   
+│   ├── models
+│   │ 
+│   ├── blueprints
+│   │   
+│   └── utils
+│   
+├── requirements
+├── bin (used for running api in web server)
+├── migrations (auto generated)
+├── tests
+├── wgsi.py (used for running api in web server)
+└── setup.cfg (settings for flake8 linting)
+```
+ The `config.py` file contains the code for the main api and Flask settings and the `__init__.py` file in the `api` folder sets up the application. `controllers` is the folder that container the functional code for most of the api endpoints (routes). `utils` contains additional functional code for additional shared behaviour that don't belong in a single controller like checking if JWT tokens are blacklisted. `models` contain data classes that represent tables within the database it is also necessary to create database migrations. `blueprints` contain the files that define all of the endpoints (routes) in a blueprint which is a Flask construct. 
 
 ## Linting
 ---
+
+### Frontend
 - The frontend is setup with ESLint/Prettier
 - To run the code formatter i.e. Prettier type the command `npm format` in the root directory and this will run `prettier --write` on the entire project.
 - There are two main commands for ESLint `npm lint` which will just run the basic ESLint command and `npm lint:fix` which will run some automatted fixes.
 
+### Backend
+- The Backend uses Flake8 for linting
+- There are a couple ways to run the linter depending on preference
+  - If you have `Make` can run the command `make lint` the Flake8 command
+  - If you do not use `Make` you can just run the command in the file which is `flake8 api --count --show-source --statistics`
+    - This will lint only the `api` folder becasue it contains the main code for the api. If you want strictly enforce the linting rules on the entire backend directory you can just run `flake8` in the backend directory.
+
+### Unity Dashboard
 - The Unity dashboard implements Stylecop for formatting rules and SonarLint for linting.
   - Both are implemented as NuGet packages that run in Visual Studio 2022.
   - Neither implement auto-fix with a single command, but errors will be caught as they are typed and VS will provide warnings.
-  - Specific rules can be configured in the .editorconfig file. 
-
-## AWS CDK api
----
-- Using the cdk requries admin credentials to your AWS account along with the [AWS CLI](https://aws.amazon.com/cli/). 
- - For development, simply clone the [repository](https://github.com/tsnewlin/peak-vis-cdk) AWS cdk projects do not run on a server.
-- The AWS cdk is used to create AWS infrastruce through code, you can learn more [here](https://aws.amazon.com/cdk/).
-- Unit tests can be ran by running `npm run test` in the root directory of the project. If you want to run the tests with coverage you can add the `--coverage` flag.
+  - Specific rules can be configured in the .editorconfig file.
