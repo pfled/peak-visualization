@@ -33,4 +33,8 @@ an oral presentation while I was there.
 ---
 I enjoyed the symposium. I felt proud explaining our project to people and seeing their impressions. I also liked seeing other people's posters and presentations.
 
+## Cody
+---
+The student symposium was a fun experience. I enjoyed talking to people about the project and explaining different features of how it worked. The people that we talked to seemed to be very interested with our project. It was nice to see other projects from students with other studies than computer science. It was also neat to see all the other capstone projects for CS on display as well. Overall, I think that the student symposium was a fun experience.
+
 ![Group Photo](./images/group.jpg)
