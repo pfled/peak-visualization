@@ -29,4 +29,8 @@ I wish there had been more people that came to talk to us during the time that w
 from people in other disciplines around Ball State. I also wish that I had looked more at the schedule and made time for to attend
 an oral presentation while I was there.
 
+## Dan
+---
+I enjoyed the symposium. I felt proud explaining our project to people and seeing their impressions. I also liked seeing other people's posters and presentations.
+
 ![Group Photo](./images/group.jpg)
