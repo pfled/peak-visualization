@@ -106,23 +106,23 @@ The database can be initialized in the dev environment by running the commands `
 The file structure for the project is as follows:
 ```
 backend
-├── api
-│   ├── __init__.py
-│   ├── config.py
+* api
+│   * __init__.py
+│   * config.py
 │   │
-│   ├── controllers
+│   * controllers
 │   │   
-│   ├── models
+│   * models
 │   │ 
-│   ├── blueprints
+│   * blueprints
 │   │   
 │   └── utils
 │   
-├── requirements
-├── bin (used for running api in web server)
-├── migrations (auto generated)
-├── tests
-├── wgsi.py (used for running api in web server)
+* requirements
+* bin (used for running api in web server)
+* migrations (auto generated)
+* tests
+* wgsi.py (used for running api in web server)
 └── setup.cfg (settings for flake8 linting)
 ```
  The `config.py` file contains the code for the main api and Flask settings and the `__init__.py` file in the `api` folder sets up the application. `controllers` is the folder that container the functional code for most of the api endpoints (routes). `utils` contains additional functional code for additional shared behaviour that don't belong in a single controller like checking if JWT tokens are blacklisted. `models` contain data classes that represent tables within the database it is also necessary to create database migrations. `blueprints` contain the files that define all of the endpoints (routes) in a blueprint which is a Flask construct. 
@@ -141,6 +141,10 @@ AWS_SECRET_ACCESS_KEY=
  ``` 
 
 The `S3_BUCKET_NAME`, `AWS_ACCESS_KEY_ID`, and `AWS_SECRET_ACCESS_KEY` should all be created and found on your AWS account. `DB_CONNECTION` is the database flavor that you will be using, currently we are using MySQL but you could use whatever other SQL flavor like `PostgreSQL`. Most of the `DB` variables are also set in the `docker-compose.yml` file when defining the database image.
+
+### Note
+
+When you first start after you run the docker compose project you will need to create an admin user if you want to test admin functionality on the frontend and create new users. To do so you will need to run a custom Flask command `flask creat-admin --email {your testing email} --password {development password}`
 
 ## Linting
 ---
@@ -162,3 +166,47 @@ The `S3_BUCKET_NAME`, `AWS_ACCESS_KEY_ID`, and `AWS_SECRET_ACCESS_KEY` should al
   - Both are implemented as NuGet packages that run in Visual Studio 2022.
   - Neither implement auto-fix with a single command, but errors will be caught as they are typed and VS will provide warnings.
   - Specific rules can be configured in the .editorconfig file.
+
+
+## Third party dependencies
+---
+
+### Frontend
+
+*  react-pdf
+*  rechars
+*  eslint
+*  html2canvas
+*  isomorphic-fetch
+*  jspdf
+*  moment
+*  prettier
+*  react-dom
+*  react-router-dom
+*  react-router
+
+### Backend
+
+Production and dev
+
+*  Flask
+*  Gunicorn
+*  Flask-Migrate
+*  Flask-SQLAlchemy
+*  PyJWT
+*  flask-jwt-extended
+*  mysqlclient
+*  cmake
+*  flask-bcrypt
+*  boto3
+*  JSONSchema
+*  flask-cors
+
+Dev only
+
+*  pytest
+*  coverage
+*  flake8
+*  python-dotenv
+*  moto
+*  pytest-dotenv
