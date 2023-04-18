@@ -36,3 +36,5 @@
 - The api is setup to run on the popular Python webserver flavor `Gunicorn`. so if that is not your preference for production you'll have to create a diffent setup for the api.
 
 - You can just take the code in the `backend` directory and run the setup shell script on a web server running Gunicorn or in a container and put on a cloud hosting service. To route traffic you will likely need some sort of load balancer to route http or https traffick to port 8080 (or the port you configured) on the web server.
+
+- When running the backend application on a webserver for the first time you will need to create the list of admins for the Peak Mind on the webserver it self. A custom Flask cli script was added to the backend so that admins can be created by running `flask create-admin --username --password`. If you are running the backend in a container service you will need to create a script to create these users otherwise you can connect to the web server via ssh to run this command whenever an Admin needs to be added.
