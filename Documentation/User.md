@@ -113,3 +113,10 @@ To get to registration click the link under the "LOGIN" button and create an acc
 
 ![PDF Export Results](./images/WebExportDataResult.png)
 
+### Admin Page
+
+- The admin page allows for the admin that is logged in to create an organization and to create users and managers for that organization.
+
+### Manager Page
+
+- The manager page allows someone from the organization that is acting as a manager to access all the user's data that is in that organization. The manager can see a list of all users in the same organization, they can then click on the link and be taken to the individual's datasets to be reviewed.
