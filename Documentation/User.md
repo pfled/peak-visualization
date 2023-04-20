@@ -90,12 +90,12 @@ To get to registration click the link under the "LOGIN" button and create an acc
 
 - To add a note to a session dataset, click on any of the charts. A window will appear with the data and timestamp values automatically filled in, and more space to add a note.
 
-![Note Taker UI](./images/WebNoteTakerInterface.png)
+![Note Taker UI](./images/FloatingNoteTaker.png)
 
 ### View Dataset Notes
 - To view all saved notes for a given dataset, click "View Session Notes".
 ![View Session Notes Button](./images/WebShowSessionNotesButton.png)
-![Session Notes UI](./images/WebSessionNotes.png)
+![Session Notes UI](./images/NoteViewer.png)
 
 ### Export PDF
 
@@ -115,8 +115,14 @@ To get to registration click the link under the "LOGIN" button and create an acc
 
 ### Admin Page
 
-- The admin page allows for the admin that is logged in to create an organization and to create users and managers for that organization.
+- On the admin page, the user can perform executive functions such as creating and deleting organizations/users.
+
+![Admin Portal](./images/AdminDashboard.png)
+![Admin Portal User Manager](./images/UserManager.png)
+![Admin Portal User Creator](./images/UserCreator.png)
 
 ### Manager Page
 
 - The manager page allows someone from the organization that is acting as a manager to access all the user's data that is in that organization. The manager can see a list of all users in the same organization, they can then click on the link and be taken to the individual's datasets to be reviewed.
+
+![Manager Portal](./images/ManagerPortal.png)
